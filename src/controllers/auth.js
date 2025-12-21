@@ -7,6 +7,7 @@ import {
 import { MONTH } from "../constants/index.js";
   
   export const registerUserController = async (req, res) => {
+    console.log("REGISTER BODY:", req.body);
     const user = await registerUser(req.body);
   
     res.status(201).json({
